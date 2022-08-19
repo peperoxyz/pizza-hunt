@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@300;400;500;600&family=Poppins:wght@200;400;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+  padding: 32px;
+}
+
+router-outlet + * {
+  /* padding: 0 32px; */
+}
