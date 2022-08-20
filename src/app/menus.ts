@@ -1,4 +1,5 @@
 export interface Menu {
+  id: number;
   kategori: string;
   nama: string;
   deskripsi: string;
@@ -8,6 +9,7 @@ export interface Menu {
 
 export const menus = [
   {
+    id: 1,
     kategori: 'pizza',
     nama: 'Meat Lover',
     deskripsi:
@@ -16,6 +18,7 @@ export const menus = [
     gambar: 'meat-lover.jpg',
   },
   {
+    id: 2,
     kategori: 'pizza',
     nama: 'Super Supreme',
     deskripsi:
@@ -24,6 +27,7 @@ export const menus = [
     gambar: 'supreme.jpg',
   },
   {
+    id: 3,
     kategori: 'pizza',
     nama: 'Tuna Melt',
     deskripsi: 'Irisan daging ikan tuna, butiran jagung, saus mayonnaise.',
@@ -31,6 +35,7 @@ export const menus = [
     gambar: 'tuna-melt.jpg',
   },
   {
+    id: 4,
     kategori: 'pizza',
     nama: 'American Favourite',
     deskripsi: 'Pepperoni sapi, daging sapi cincang, jamur.',
@@ -38,6 +43,7 @@ export const menus = [
     gambar: 'american-favourite.jpg',
   },
   {
+    id: 5,
     kategori: 'pasta',
     nama: 'Beef Spaghetti',
     deskripsi: 'Pepperoni sapi, daging sapi cincang, jamur.',
@@ -45,6 +51,7 @@ export const menus = [
     gambar: 'beef-spaghetti.jpg',
   },
   {
+    id: 6,
     kategori: 'pasta',
     nama: 'Beef Lasagna',
     deskripsi:
@@ -53,6 +60,7 @@ export const menus = [
     gambar: 'beef-lasagna.jpg',
   },
   {
+    id: 7,
     kategori: 'pasta',
     nama: 'Creamy Beef Fettuccine',
     deskripsi: 'Daging sapi asap dan jamur, ditumis dengan saus krim lembut.',
@@ -60,6 +68,7 @@ export const menus = [
     gambar: 'creamy-beef-fettuccine.jpg',
   },
   {
+    id: 8,
     kategori: 'nasi',
     nama: 'Meatballs Beef Mushroom',
     deskripsi: 'Bola daging sapi dengan saus daging sapi cincang dan jamur.',
@@ -67,6 +76,7 @@ export const menus = [
     gambar: 'meatballs-beef-mushroom.jpg',
   },
   {
+    id: 9,
     kategori: 'nasi',
     nama: 'Black Pepper Chicken',
     deskripsi: 'Ayam dengan saus lada hitam.',
@@ -74,6 +84,7 @@ export const menus = [
     gambar: 'black-pepper-chicken.jpg',
   },
   {
+    id: 10,
     kategori: 'minuman',
     nama: 'Hazelnut Milkshake',
     deskripsi: '',
@@ -81,6 +92,7 @@ export const menus = [
     gambar: 'chocolate-milkshake.jpg',
   },
   {
+    id: 11,
     kategori: 'minuman',
     nama: 'Choco Mint',
     deskripsi: '',
@@ -88,6 +100,7 @@ export const menus = [
     gambar: 'choco-mint.jpg',
   },
   {
+    id: 12,
     kategori: 'minuman',
     nama: 'Toffee Coffee',
     deskripsi: '',
@@ -95,6 +108,7 @@ export const menus = [
     gambar: 'toffee-coffee.jpg',
   },
   {
+    id: 13,
     kategori: 'minuman',
     nama: 'Green Tea Shake',
     deskripsi: '',
@@ -102,6 +116,7 @@ export const menus = [
     gambar: 'green-tea-shake.jpg',
   },
   {
+    id: 14,
     kategori: 'minuman',
     nama: 'Strawberry Milkshake',
     deskripsi: '',
@@ -109,6 +124,7 @@ export const menus = [
     gambar: 'strawberry-milkshake.jpg',
   },
   {
+    id: 15,
     kategori: 'minuman',
     nama: 'Chocolate Milkshake',
     deskripsi: '',
