@@ -7,7 +7,7 @@
 >
   <div
     *ngFor="let menu of menus"
-    [routerLink]="['menus', menu.id]"
+    [routerLink]="['menus/detail', menu.id]"
     class="100 max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
   >
     <div class="md:flex">

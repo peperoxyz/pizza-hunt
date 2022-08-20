@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { menus } from '../menus';
+import { menus, Menu } from '../menus';
 
 @Component({
   selector: 'app-top-bar',
