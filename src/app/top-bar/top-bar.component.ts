@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { menus, Menu } from '../menus';
 
 @Component({
@@ -7,5 +8,28 @@ import { menus, Menu } from '../menus';
   styleUrls: ['./top-bar.component.css'],
 })
 export class TopBarComponent {
-  kategoris = ['Pizza', 'Pasta', 'Rice Bowl', 'Drinks'];
+  constructor(private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+  }
+
+  categories = [
+    {
+      name: 'Pizza',
+      icon: '🍕',
+    },
+    {
+      name: 'Pasta',
+      icon: '🍝',
+    },
+    {
+      name: 'Rice',
+      icon: '🍚',
+    },
+    {
+      name: 'Drinks',
+      icon: '🍹',
+    },
+  ];
 }

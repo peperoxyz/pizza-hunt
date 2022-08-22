@@ -12,6 +12,8 @@ export class KategoriComponent implements OnInit {
 
   category: string = '';
 
+  categories: any;
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {

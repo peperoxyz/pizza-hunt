@@ -11,9 +11,9 @@ export const menus: Menu[] = [
   {
     id: 1,
     kategori: 'Pizza',
-    nama: 'Meat Lover',
+    nama: "Meat Lover's Lovers",
     deskripsi:
-      'Irisan sosis sapi, daging sapi cincang, burger sapi, sosis ayam.',
+      'Irisan sosis sapi, daging sapi cincang, burger sapi, sosis ayam, jamur, paprika merah dan paprika hijau.',
     harga: 49500,
     gambar: 'meat-lover.jpg',
   },
@@ -69,7 +69,7 @@ export const menus: Menu[] = [
   },
   {
     id: 8,
-    kategori: 'Rice Bowl',
+    kategori: 'Rice',
     nama: 'Meatballs Beef Mushroom',
     deskripsi: 'Bola daging sapi dengan saus daging sapi cincang dan jamur.',
     harga: 40000,
@@ -77,7 +77,7 @@ export const menus: Menu[] = [
   },
   {
     id: 9,
-    kategori: 'Rice Bowl',
+    kategori: 'Rice',
     nama: 'Black Pepper Chicken',
     deskripsi: 'Ayam dengan saus lada hitam.',
     harga: 40000,

@@ -7,7 +7,7 @@
 <div
   *ngFor="let menu of menus"
   [routerLink]="['menus/detail', menu.id]"
-  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5 gap-4 p-8"
+  class="grid grid-cols-1 gap-4 p-8"
 >
   <div>
     <div
@@ -21,8 +21,8 @@
             alt="Man looking at item at a store"
           />
         </div>
-        <div class="p-8">
-          <a [routerLink]="['/menus', menu.kategori]">
+        <div class="p-8" *ngIf="category">
+          <a [routerLink]="['/menus', category]">
             <div
               class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
             >
@@ -38,14 +38,4 @@
       </div>
     </div>
   </div>
-  <!-- <div
-  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5 gap-4 p-8"
->
-  <div
-    *ngFor="let menu of menus"
-    class="100 max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
-  >
-    <h1>Haha</h1>
-  </div>
-</div> -->
 </div>

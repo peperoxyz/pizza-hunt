@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <form [formGroup]="checkoutForm" class="mt-5">
+  <form [formGroup]="checkoutForm" class="mt-5" (ngSubmit)="onSubmit()">
     <div>
       <label for="name" class="block mb-2"> Name </label>
       <input
@@ -28,6 +28,7 @@
         class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         formControlName="name"
+        required
       />
     </div>
 
@@ -38,6 +39,7 @@
         class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         formControlName="address"
+        required
       />
     </div>
 
