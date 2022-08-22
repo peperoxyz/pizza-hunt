@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { PizzaComponent } from './pizza/pizza.component';
 import { RouterModule } from '@angular/router';
 import { MenuDetailsComponent } from './menu-details/menu-details.component';
 import { KategoriComponent } from './kategori/kategori.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { KategoriComponent } from './kategori/kategori.component';
     PizzaComponent,
     MenuDetailsComponent,
     KategoriComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: MenuListComponent },
       {
@@ -31,6 +35,10 @@ import { KategoriComponent } from './kategori/kategori.component';
       {
         path: 'menus/:menuKategori',
         component: KategoriComponent,
+      },
+      {
+        path: 'cart',
+        component: CartComponent,
       },
     ]),
   ],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
 import { Menu, menus } from '../menus';
 
 @Component({
@@ -10,7 +11,15 @@ import { Menu, menus } from '../menus';
 export class MenuDetailsComponent implements OnInit {
   menu: Menu | undefined;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) {}
+
+  addToCart(menu: Menu) {
+    this.cartService.addToCart(menu);
+    window.alert(`[${menu.kategori}] ${menu.nama} has been added to the cart!`);
+  }
 
   ngOnInit() {
     // Get the product id from the current route

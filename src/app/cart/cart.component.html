@@ -1,0 +1,51 @@
+<div>
+  <h2 class="text-3xl font-normal bg-slate-200 mx-8 inline-block">My Cart</h2>
+</div>
+
+<div class="m-8 text-2xl">
+  <div class="p-8 bg-slate-200 max-w-sm text-2xl">
+    <div class="flex gap-5 justify-between">
+      <h1>Pizza Bolognese</h1>
+      <h1>Rp. 12000</h1>
+    </div>
+  </div>
+
+  <div
+    class="p-8 mt-5 bg-slate-200 max-w-sm text-2xl"
+    *ngFor="let item of items"
+  >
+    <div class="flex gap-5 justify-between">
+      <h1>{{ item.nama }}</h1>
+      <h1>Rp. {{ item.harga }}</h1>
+    </div>
+  </div>
+
+  <form [formGroup]="checkoutForm" class="mt-5">
+    <div>
+      <label for="name" class="block mb-2"> Name </label>
+      <input
+        id="name"
+        class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        formControlName="name"
+      />
+    </div>
+
+    <div>
+      <label for="address " class="block mb-2"> Address </label>
+      <input
+        id="address"
+        class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        formControlName="address"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="mt-5 px-7 py-3 rounded-lg bg-indigo-400 text-white hover:shadow-lg"
+    >
+      Checkout
+    </button>
+  </form>
+</div>
