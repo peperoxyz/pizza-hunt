@@ -1,68 +1,44 @@
-<div
-  class="bg-slate-900 py-1 flex flex-nowrap justify-between items-center sticky top-0"
->
-  <div>
-    <a
-      [routerLink]="['/']"
-      class="p-8 font-bold text-3xl flex text-white items-center"
-    >
-      <h1>Pizza Hunt!🍕</h1>
-    </a>
-  </div>
-  <div class="block md:hidden p-8">
-    <i
-      class="bx bx-menu text-white text-3xl px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900"
-    ></i>
-  </div>
-  <div class="hidden md:block p-8">
-    <a
-      *ngFor="let category of categories"
-      [routerLink]="['/menus', category.name]"
-      class="inline-block p-8 font-semibold text-2xl text-white px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900 group"
-    >
-      <div>
-        <h1>
-          {{ category.name }}
-          <span class="group-hover:inline-block hidden">{{
-            category.icon
-          }}</span>
-        </h1>
-      </div>
-    </a>
-    <!--
-    <a
-      [routerLink]=""
-      class="inline-block p-8 font-semibold text-2xl text-white px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900 group"
-    >
-      <div>
-        <h1>Pasta <span class="group-hover:inline-block hidden">🍝</span></h1>
-      </div>
-    </a>
-    <a
-      [routerLink]=""
-      class="inline-block p-8 font-semibold text-2xl text-white px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900 group"
-    >
-      <div>
-        <h1>
-          Rice Bowl <span class="group-hover:inline-block hidden">🍛</span>
-        </h1>
-      </div>
-    </a>
-    <a
-      [routerLink]=""
-      class="inline-block p-8 font-semibold text-2xl text-white px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900 group"
-    >
-      <div>
-        <h1>Drinks <span class="group-hover:inline-block hidden">🍹</span></h1>
-      </div>
-    </a> -->
-    <a
-      [routerLink]="'/cart'"
-      class="inline-block p-8 font-semibold text-2xl px-3 py-2 rounded-lg text-white bg-indigo-400 group ml-4"
-    >
-      <div>
-        <h1>My Cart</h1>
-      </div>
-    </a>
+<div class="bg-slate-900">
+  <div
+    class="bg-slate-900 py-1 flex flex-nowrap justify-between items-center sticky top-0 max-w-7xl mx-auto"
+  >
+    <div>
+      <a
+        [routerLink]="['/']"
+        class="p-8 font-bold text-3xl flex text-white items-center"
+      >
+        <h1>Pizza Hunt!🍕</h1>
+      </a>
+    </div>
+    <div class="block md:hidden p-8">
+      <i
+        class="bx bx-menu text-white text-3xl px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+      ></i>
+    </div>
+    <div class="hidden md:block p-8">
+      <a
+        *ngFor="let category of categories"
+        [routerLink]="['/menus', category.name]"
+        class="inline-block p-8 font-semibold text-2xl text-white px-3 py-2 rounded-lg hover:bg-slate-100 hover:text-slate-900 group"
+      >
+        <div>
+          <h1>
+            {{ category.name }}
+            <span class="group-hover:inline-block hidden">{{
+              category.icon
+            }}</span>
+          </h1>
+        </div>
+      </a>
+
+      <a
+        [routerLink]="'/cart'"
+        class="inline-block p-8 font-semibold text-2xl px-3 py-2 rounded-lg text-white bg-indigo-400 group ml-4"
+      >
+        <div>
+          <h1>My Cart</h1>
+        </div>
+      </a>
+    </div>
   </div>
 </div>

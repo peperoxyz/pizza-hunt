@@ -42,14 +42,7 @@ export const menus: Menu[] = [
     harga: 49500,
     gambar: 'american-favourite.jpg',
   },
-  {
-    id: 5,
-    kategori: 'Pasta',
-    nama: 'Beef Spaghetti',
-    deskripsi: 'Pepperoni sapi, daging sapi cincang, jamur.',
-    harga: 43000,
-    gambar: 'beef-spaghetti.jpg',
-  },
+
   {
     id: 6,
     kategori: 'Pasta',

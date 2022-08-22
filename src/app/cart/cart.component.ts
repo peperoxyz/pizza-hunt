@@ -23,15 +23,9 @@ export class CartComponent {
   onSubmit(): void {
     // Process checkout data here
     this.items = this.cartService.clearCart();
-    if (this.checkoutForm.value === '') {
-      console.warn('Your order has been submitted', this.checkoutForm.value);
-      window.alert('Your order has been submitted');
-      this.checkoutForm.value == '';
-      this.checkoutForm.reset();
-    } else {
-      window.alert(
-        'Fill the name and the address input to checkout your order!'
-      );
-    }
+    console.warn('Your order has been submitted', this.checkoutForm.value);
+    window.alert('Your order has been submitted');
+    this.checkoutForm.value == '';
+    this.checkoutForm.reset();
   }
 }

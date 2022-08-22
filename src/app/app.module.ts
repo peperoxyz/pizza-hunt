@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { MenuDetailsComponent } from './menu-details/menu-details.component';
 import { KategoriComponent } from './kategori/kategori.component';
 import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,15 @@ import { CartComponent } from './cart/cart.component';
     MenuDetailsComponent,
     KategoriComponent,
     CartComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: MenuListComponent },
+      { path: 'menus', component: MenuListComponent },
+      { path: '', component: HomeComponent },
       {
         path: 'menus/detail/:menuId',
         component: MenuDetailsComponent,
