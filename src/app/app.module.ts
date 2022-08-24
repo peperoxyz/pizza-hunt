@@ -53,7 +53,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
         component: RestApiComponent,
       },
       {
-        path: 'restapi/detail/:userId',
+        path: 'restapi/:userId',
         component: UserDetailComponent,
       },
     ]),

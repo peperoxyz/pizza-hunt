@@ -2,21 +2,21 @@
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-8">
       <div
-        *ngFor="let post of posts"
-        [routerLink]="['/restapi/detail', post.id]"
+        *ngFor="let user of users"
+        [routerLink]="['/restapi', user.id]"
         class="100 max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl cursor-pointer"
       >
         <div class="md:flex">
           <div class="md:shrink-0 flex items-center">
             <img
               class="h-10 w-10 object-cover rounded-lg md:h-20 md:w-20 md:p-2 md:rounded-2xl ml-1"
-              [src]="post.picture"
+              [src]="user.picture"
               alt="Man looking at item at a store"
             />
             <div class="ml-4">
-              <span class="font-semibold text-slate-900">{{ post.title }}</span>
+              <span class="font-semibold text-slate-900">{{ user.title }}</span>
               <h1 class="text-slate-900">
-                {{ post.firstName }} {{ post.lastName }}
+                {{ user.firstName }} {{ user.lastName }}
               </h1>
             </div>
           </div>

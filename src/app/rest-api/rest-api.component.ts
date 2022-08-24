@@ -11,22 +11,21 @@ export class RestApiComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   // Define variabel posts
-  posts: any;
+  users: any;
 
   // Function untuk fetch data dari API
-  loadPostsDummy() {
+  loadUsers() {
     const headers = new HttpHeaders({ 'app-id': '63033943889b3aab444829f0' });
     const requestOptions = { headers: headers };
 
     this.http
       .get('https://dummyapi.io/data/v1/user', requestOptions)
-      .subscribe((posts: any) => {
-        console.log(posts);
-        this.posts = posts.data;
+      .subscribe((users: any) => {
+        this.users = users.data;
       });
   }
 
   ngOnInit(): void {
-    this.loadPostsDummy();
+    this.loadUsers();
   }
 }

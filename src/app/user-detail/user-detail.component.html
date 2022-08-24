@@ -1,1 +1,30 @@
-<p>user-detail works!</p>
+<section class="bg-slate-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-2 gap-4 p-8">
+      <div
+        *ngFor="let pou of postsOfUsers"
+        [routerLink]=""
+        class="100 bg-white rounded-xl shadow-md overflow-hidden cursor-pointer"
+      >
+        <div class="md:flex">
+          <div class="md:shrink-0 flex items-center">
+            <img
+              class="h-48 w-48 break-words object-cover rounded-lg md:h-48 md:w-48 md:p-2 md:rounded-2xl ml-1"
+              [src]="pou.image"
+              alt="Man looking at item at a store"
+            />
+            <div class="ml-4">
+              <span class="text-sm text-slate-900">{{ pou.owner.text }}</span>
+              <h1 class="text-slate-900">
+                {{ pou.owner.firstName }} {{ pou.owner.lastName }}
+              </h1>
+              <p class="text-slate-900 overflow-auto break-words">
+                {{ pou.text }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
