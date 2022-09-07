@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { RestApiComponent } from './rest-api/rest-api.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     HomeComponent,
     RestApiComponent,
     UserDetailComponent,
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'menus', component: MenuListComponent },
       { path: '', component: HomeComponent },
@@ -55,6 +59,10 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
       {
         path: 'restapi/:userId',
         component: UserDetailComponent,
+      },
+      {
+        path: 'todolist',
+        component: TodoListComponent,
       },
     ]),
   ],
