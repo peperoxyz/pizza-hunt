@@ -1,11 +1,16 @@
 <section class="bg-slate-100">
   <div class="max-w-7xl mx-auto">
-    <div *ngIf="category">
-      <h2
-        class="text-3xl font-normal bg-slate-200 text-slate-900 mx-8 inline-block"
-      >
-        {{ category }}
-      </h2>
+    <div class="flex justify-between">
+      <div *ngIf="category">
+        <h2
+          class="text-3xl font-normal bg-slate-200 text-slate-900 mx-8 inline-block"
+        >
+          {{ category }}
+        </h2>
+      </div>
+      <app-search
+        (searchTextChanged)="onSearchTextEntered($event)"
+      ></app-search>
     </div>
 
     <div
@@ -13,7 +18,7 @@
       [routerLink]="['/menus/detail', menu.id]"
       class="grid grid-cols-1 gap-2 p-8"
     >
-      <div>
+      <div *ngIf="searchText === '' || menu.nama.toLowerCase().includes(searchText) || menu.nama.includes(searchText)">
         <div
           class="100 max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
         >

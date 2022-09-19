@@ -16,6 +16,13 @@ export class KategoriComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {}
 
+  searchText: string = '';
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  }
+
   ngOnInit() {
     // Get the product id from the current route
     const routeParams = this.route.snapshot.paramMap;

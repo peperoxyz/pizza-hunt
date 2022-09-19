@@ -1,0 +1,10 @@
+<div class="flex items-center mt-4">
+  <span>Search</span>
+  <input
+    type="text"
+    class="border px-5 py-2 ml-3 mr-5 rounded-lg"
+    placeholder="Search here"
+    [(ngModel)]="enteredSearchValue"
+    (input)="onSearchTextChanged()"
+  />
+</div>

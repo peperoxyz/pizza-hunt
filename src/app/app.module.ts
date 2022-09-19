@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { RestApiComponent } from './rest-api/rest-api.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     RestApiComponent,
     UserDetailComponent,
     TodoListComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
